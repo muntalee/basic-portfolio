@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter';
+  font-size: 1.2em;
+  color: white;
+  background: #2c2c2c;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  font-weight: 500;
+}
+
+#nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#nav a:hover {
+  background-color: #555;
+  font-weight: 500;
+}
+
+div {
+  padding-left: 50px;
+  padding-right: 50px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main {
+  margin-right: 2em;
+}
+
+
+details {
+  border: 2px solid #555; /* Rounded border with a color lighter than #2c2c2c */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Add padding for spacing */
+  background-color: #555; /* Background color for the closed details element */
+  color: white; /* Text color for the summary text */
+
+  /* Increase the size of the dropdown arrow icon */
+  summary::-webkit-details-marker {
+    transform: scale(1.5); /* Adjust the size as needed */
+  }
+}
+
+details[open] summary {
+  background-color: #555; /* Background color when open */
+}
+
+details > summary {
+  font-weight: 500;
+  font-style: italic;
+}
+
+#interests:target, #early:target, #challenges:target {
+  outline: 2px solid rgba(255, 255, 255, 0.1);
+  outline-offset: 15px;
+  border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
+
+.popup:target {
+    display: block;
+}
+
+#popup-image {
+    max-width: 100%;
+    max-height: 100%;
+    width:30em;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    cursor: pointer;
+}
